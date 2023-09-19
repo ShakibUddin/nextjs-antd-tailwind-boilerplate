@@ -7,7 +7,7 @@ import InputField from "@/components/common/inputField";
 
 const Login = () => {
   return (
-    <div className="w-full h-screen bg-[var(--brandColor)] flex justify-center items-center">
+    <div className="w-full min-h-screen bg-[var(--brandColor)] flex justify-center items-center">
       <div className="flex flex-col gap-4 justify-stretch p-4 m-4 rounded-md bg-white shadow-md w-full sm:w-2/3 md:w-2/3 lg:w-1/3">
         <span className="font-bold text-3xl text-[var(--brandColor)] text-center">
           COMPANY
