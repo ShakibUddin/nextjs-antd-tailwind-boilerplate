@@ -4,9 +4,7 @@ import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
 
-export const Login = () => {
-  const [showPassword, setShowPassword] = useState(false);
-
+const Login = () => {
   return (
     <div className="w-full h-screen bg-[var(--brandColor)] flex justify-center items-center">
       <div className="flex flex-col gap-4 justify-stretch p-4 m-4 rounded-md bg-white shadow-md w-full md:w-1/3 lg:w-1/4 ">
@@ -17,7 +15,7 @@ export const Login = () => {
         <Input.Password
           placeholder="Password"
           iconRender={(visible) =>
-            visible ? <AiFillEye size={20} /> : <AiFillEyeInvisible size={20} />
+            visible ? <AiFillEyeInvisible size={20} /> : <AiFillEye size={20} />
           }
           className="p-4"
         />
@@ -26,7 +24,7 @@ export const Login = () => {
         </Button>
         <p className="text-center">
           Do not have an account?{" "}
-          <Link className="text-blue-500" href={"/signup"}>
+          <Link className="text-blue-500 font-bold" href={"/signup"}>
             Register
           </Link>
         </p>
@@ -34,3 +32,4 @@ export const Login = () => {
     </div>
   );
 };
+export default Login;
