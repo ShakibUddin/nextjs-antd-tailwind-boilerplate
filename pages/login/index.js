@@ -3,6 +3,7 @@ import { Button, Checkbox, Form, Input } from "antd";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
+import InputField from "@/components/common/inputField";
 
 const Login = () => {
   return (
@@ -11,8 +12,15 @@ const Login = () => {
         <span className="font-bold text-3xl text-[var(--brandColor)] text-center">
           COMPANY
         </span>
-        <Input placeholder="Email" className="p-4" />
-        <Input.Password
+        <InputField
+          title={"Email"}
+          type={"email"}
+          placeholder="Email"
+          className="p-4"
+        />
+        <InputField
+          title={"Password"}
+          type={"password"}
           placeholder="Password"
           iconRender={(visible) =>
             visible ? <AiFillEyeInvisible size={20} /> : <AiFillEye size={20} />

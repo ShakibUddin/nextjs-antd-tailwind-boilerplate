@@ -11,3 +11,10 @@ body{
   height: 100vh;
 }
 
+.input-title{
+  @apply text-base;
+}
+
+.error-message{
+  @apply text-red-500 text-base;
+}
