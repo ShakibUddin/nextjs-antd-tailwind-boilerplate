@@ -61,4 +61,10 @@ const Signup = () => {
     </div>
   );
 };
+
+Signup.getLayout = function getLayout(page) {
+  // No layout
+  return page;
+};
+
 export default Signup;
