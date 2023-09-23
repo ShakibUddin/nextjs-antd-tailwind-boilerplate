@@ -1,13 +1,11 @@
 import Link from "next/link";
 import React from "react";
 
-const DataCard = ({ title, total, icon, bgColor }) => {
+const DataCard = ({ title, total, icon, bgColor, style }) => {
   return (
     <div
-      className={
-        "flex flex-col justify-center items-center p-4 w-64 h-48 rounded-md shadow-md " +
-        bgColor
-      }
+      className={`flex flex-col justify-center items-center p-4 w-64 h-48 rounded-md shadow-md 
+        ${bgColor} ${style}`}
     >
       {icon}
       <p className="text-4xl font-bold text-center text-white">{total}</p>

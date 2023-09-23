@@ -61,30 +61,36 @@ const data = [
 
 const Dashboard = () => {
   return (
-    <div>
-      <div className="flex gap-4 p-4">
-        <div className="w-1/2 flex flex-wrap min-w-[300px] h-96 gap-4">
+    <div className="w-full h-full bg-white">
+      <div
+        id="heading"
+        className="flex w-full flex-wrap xl:flex-nowrap gap-4 p-4"
+      >
+        <div className="w-full xl:w-1/2 flex flex-wrap xl:flex-nowrap gap-4 grow">
           <DataCard
             title="Users"
             total="300k"
             icon={<FaUserAlt size={40} className="text-white" />}
+            style={"grow"}
             bgColor="bg-green-500"
           />
           <DataCard
             title="Deliveries"
             total="1M"
+            style={"grow"}
             icon={<TbTruckDelivery size={40} className="text-white" />}
             bgColor="bg-purple-500"
           />
           <DataCard
             title="Products"
             total="1000"
+            style={"grow"}
             icon={<BsFillBoxFill size={40} className="text-white" />}
             bgColor="bg-cyan-500"
           />
         </div>
-        <div className="w-1/2 min-w-[300px]">
-          <ResponsiveContainer width="100%" height="100%">
+        <div className="w-full xl:w-1/2 flex h-52 grow">
+          <ResponsiveContainer width="100%" height="100%" className={"grow"}>
             <AreaChart
               width={500}
               height={400}

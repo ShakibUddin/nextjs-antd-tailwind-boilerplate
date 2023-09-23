@@ -5,6 +5,7 @@ import { MdDashboard } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
 import { SiGoogledocs } from "react-icons/si";
 import { BiLogOut } from "react-icons/bi";
+import { FaUserAlt } from "react-icons/fa";
 import logo from "../../public/svgs/logo.svg";
 import Link from "next/link";
 import { useRouter } from "next/router";
