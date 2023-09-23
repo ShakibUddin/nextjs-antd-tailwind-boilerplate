@@ -9,6 +9,7 @@ import { FaUserAlt } from "react-icons/fa";
 import logo from "../../public/svgs/logo.svg";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Head from "next/head";
 const { Header, Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
   return {
@@ -27,7 +28,7 @@ const items = [
   getItem(<Link href={"/users"}>Users</Link>, "/users", <FaUsers />),
   getItem("Files", "3", <SiGoogledocs />),
 ];
-const CustomLayout = ({ children }) => {
+const CustomLayout = ({ children, pageName }) => {
   const [collapsed, setCollapsed] = useState(false);
   const router = useRouter();
   return (
@@ -36,6 +37,9 @@ const CustomLayout = ({ children }) => {
         minHeight: "100vh",
       }}
     >
+      <Head>
+        <title>{pageName}</title>
+      </Head>
       <Sider
         collapsible
         collapsed={collapsed}

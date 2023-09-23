@@ -120,4 +120,8 @@ const Dashboard = () => {
   );
 };
 
+Dashboard.getLayout = function getLayout(page) {
+  return <CustomLayout pageName={"Dashboard"}>{page}</CustomLayout>;
+};
+
 export default Dashboard;
